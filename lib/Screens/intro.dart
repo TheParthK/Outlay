@@ -7,6 +7,7 @@ import 'package:outlay/Constants/colors.dart';
 import 'package:outlay/Constants/intro_texts.dart';
 import 'package:outlay/Screens/home.dart';
 import 'package:outlay/Widgets/icon.dart';
+import 'package:slide_to_act/slide_to_act.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -30,7 +31,7 @@ class IntroPage extends StatelessWidget {
                 child: OutlayIcon(
                   diameter: size.width-30,
                   star: true,
-                  background: 'https://i.pinimg.com/564x/41/c6/ee/41c6ee0a5c17d59afaca1d2f11a7fa5d.jpg',
+                  background: 'https://i.pinimg.com/originals/c5/81/d0/c581d077bace5bc3f394f91f771f4ade.gif',
                   )
               ),
             ),
@@ -96,7 +97,7 @@ class IntroPage extends StatelessWidget {
                     },
                     child: Container(
                       height: 50,
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      // padding: const EdgeInsets.symmetric(horizontal: 5),
                       // margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                       decoration: const BoxDecoration(
                         // color: Color.fromARGB(255, 0, 0, 0),
@@ -106,8 +107,8 @@ class IntroPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [                     
                           Container(
-                            width: 40,
-                            height: 40,
+                            width: 50,
+                            height: 50,
                             decoration: const BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(20)),
                               image: DecorationImage(
@@ -117,11 +118,13 @@ class IntroPage extends StatelessWidget {
                             ),
                           ),
                           // OutlayIcon(diameter: 25, background: 'https://i.pinimg.com/564x/a6/42/cc/a642ccc7300fc88240094fb76c0021c6.jpg'),
-                          const SizedBox(width: 10,),
+                          const SizedBox(width: 5,),
                           const Icon(
                             CupertinoIcons.right_chevron,
                             color: Colors.black,
-                          )
+                            size: 22,
+                          ),
+                          const SizedBox(width: 7.5,)
                         ],
                       ),
                     ),
@@ -129,14 +132,24 @@ class IntroPage extends StatelessWidget {
                 ),
               ),
             ),
-            Text(
-              'Image credits: dribble',
-              style: TextStyle(
-                color: Colors.white.withAlpha(100),
-                fontSize: 8
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                'Image Credits: Carl Johan Hasselrot on Dribble',
+                style: TextStyle(
+                  color: Colors.white.withAlpha(100),
+                  fontSize: 8
+                ),
               ),
             ),
-            SizedBox(height: devicePadding.bottom,)
+            // Text(
+            //   'Image: Carl Johan Hasselrot @dribble',
+            //   style: TextStyle(
+            //     color: Colors.white.withAlpha(100),
+            //     fontSize: 8
+            //   ),
+            // ),
+            SizedBox(height: devicePadding.bottom + 5,)
           ],
         ),
       ),

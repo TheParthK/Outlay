@@ -35,19 +35,6 @@ class OutlayIcon extends StatelessWidget {
               color: background == '' ? Colors.white : AppColors.bgColor,
               borderRadius: BorderRadius.all(Radius.circular(diameter))
             ),
-            child: Center(
-              child: star? Container(
-                width: 0.3 * diameter,
-                height: 0.3 * diameter,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      'https://media0.giphy.com/media/1BeE7pCRWrvxJgdTib/giphy.gif?cid=6c09b952jw0nw0hhaihvjp397rakzr9lxr07aqz5pfqma700&ep=v1_stickers_related&rid=giphy.gif&ct=s'
-                    )
-                  )
-                ),
-              ) : const SizedBox(),
-            ),
           ),
         ),
       );
